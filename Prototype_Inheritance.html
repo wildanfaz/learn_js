@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype Inheritance</title>
+</head>
+<body>
+<script>
+    function A(nama){
+        this.nama = nama
+    }
+
+    function B(nama){
+        this.nama = nama
+    }
+
+    //A.prototype = B.prototype
+    B.prototype = Object.create(A.prototype)
+
+    B.prototype.C = function (nama){
+        console.info(`ini B ${this.nama} ${nama}`)
+    }
+
+    A.prototype.C = function (nama){
+        console.info(`ini A ${this.nama} ${nama}`)
+    }
+
+    const a = new A("Shiro")
+    a.C("Faz")
+
+    const b = new B("Wildan")
+    b.C("Faz")
+
+    console.info(A)
+    console.info(B)
+</script>
+</body>
+</html>

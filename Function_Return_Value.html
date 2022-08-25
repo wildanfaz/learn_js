@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Function Return Value</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ function sayHalo(namaDepan,namaBelakang){
+     const tes = `Halo ${namaDepan} ${namaBelakang}`;
+     return tes;
+ }
+const hasil = sayHalo("Muhamad Wildan","Faz")
+document.writeln(`<p>${hasil}</p>`);
+
+function hasilNilai(Value){
+    if(Value > 90){
+        return "A";
+    }
+    else if(Value >= 80){
+        return "B";
+    }
+    else if(Value < 80){
+        return "Ora Lulus";
+    }
+    else {return "Kie Arane Dudu Nilai , Tulung Nganjingnane Angka Bang Dudu Huruf"}
+}
+const hasilAkhir = hasilNilai("Satus")
+document.writeln(`<p>${hasilAkhir}</p>`);
+
+function apaAda(array,cariData){
+    for(isine of array){
+        console.info(`<p>${isine}</p>`);
+    if(isine === cariData){
+        return true;
+    }
+}
+    return false;
+}
+const array = [1,2,3,4,5,6,7,8,9,10];
+const goleti = 5;
+const isi = apaAda(array,goleti);
+document.writeln(`<p>${isi}</p>`)
+//ne wis ketemu return ora ngulang 
+</script>
+    </body>
+</html>

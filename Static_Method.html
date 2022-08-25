@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Static Method</title>
+</head>
+<body>
+<script>
+    class Tambah{
+        static plus(...nomer) {
+            let no = 0
+            for (const angka of nomer) {
+                no += angka
+            }
+            return no
+        }
+    }
+
+    const hasil = Tambah.plus(1,2,3,4)
+    console.info(hasil)
+</script>
+</body>
+</html>

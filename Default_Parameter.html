@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Default Parameter</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ function defaultParameter(nama,gender = "Durung Di Isi"){
+     console.info(nama);
+     console.info(gender);
+ }
+ defaultParameter()
+ defaultParameter("Muhamad Wildan Faz")
+ defaultParameter("Muhamad Wildan","Lanang")
+ defaultParameter("Muhamad Wildan",undefined)
+ defaultParameter("Muhamad Wildan",null)
+</script>
+    </body>
+</html>

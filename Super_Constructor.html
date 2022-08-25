@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Constructor</title>
+</head>
+<body>
+<script>
+    class Data{
+        constructor(depan) {
+            this.depan = depan
+        }
+        haloBang(nama) {
+            console.info(`Data Nama Depan ${this.depan} Nama Belakang ${nama}`)
+        }
+    }
+
+    class Person extends Data{
+        constructor(depan, belakang) {
+            super(depan);
+            this.belakang = belakang
+        }
+        haloBang() {
+            console.info(`Person Nama Depan ${this.depan} Nama Belakang ${this.belakang}`)
+        }
+    }
+    const dua = new Data("Wildan")
+    dua.haloBang("Faz")
+
+    const satu = new Person("Wildan", "Faz")
+    satu.haloBang()
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Function Sebagai Value</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ function sayHello(nama){
+     document.writeln(`<p>Halo ${nama}</P>`)
+ }
+ sayHello("Wildan");
+const aku = sayHello;
+aku("Wildan")
+
+function namaSaya(namaku){
+    namaku("Wildan");
+}
+namaSaya(sayHello);
+namaSaya(aku)
+</script>
+    </body>
+</html>

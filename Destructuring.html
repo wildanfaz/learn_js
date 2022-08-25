@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Destructuring</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+    //Gunakan {} untuk membuat atau membedakan scope
+    {
+ const namaLengkap = ["Muhamad","Wildan","Faz"]
+ /*
+ const namaDepan = nama[0];
+ const namaTengah = nama[1];
+ const namaBelakang = nama[2];
+ */
+//Destructuring
+const [namaDepan, namaTengah, namaBelakang, ...lainnya] = namaLengkap
+ console.info(namaDepan);
+ console.info(namaTengah);
+ console.info(namaBelakang);
+    }
+
+    {
+ const data = {
+     nama : "Muhamad Wildan Faz",
+     umur : "18",
+     alamat : {
+         desa : "Pepedan",
+         kecamatan : "Dukuhturi",
+         kabupaten : "Tegal"
+     },
+     hobi : "Rebahan bae kaya wong sukses T_T",
+     quotes : "Kurangi Berkata,Perbanyak Usaha dan Doa"
+ }
+ const {nama,umur,alamat:{desa,kecamatan,kabupaten}, ...dataLainnya} = data
+ console.info(nama)
+ console.info(umur)
+ console.info(desa)
+ console.info(kecamatan)
+ console.info(kabupaten)
+ console.info(dataLainnya)
+    }
+
+    {
+        function namaSaya({depan,tengah,belakang}){
+            console.info(depan);
+            console.info(tengah);
+            console.info(belakang);
+        }
+        const nama = {
+            depan : "Muhamad",
+            tengah : "Wildan",
+            belakang : "Faz"
+        }
+        namaSaya(nama)
+    }
+
+    {
+        function tambah([pertama,kedua]){
+            return pertama + kedua;
+        }
+        console.info(tambah([10,20]))
+    }
+
+    {
+        const nama = ["Muhamad","Wildan"]
+        const [depan,tengah,belakang = "Faz"] = nama
+        console.info(depan)
+        console.info(tengah)
+        console.info(belakang)
+    }
+
+    {
+        const data = {
+            namaDepan : "Muhamad",
+            namaBelakang : "Faz"
+        }
+        const {namaDepan,namaTengah = "Wildan",namaBelakang} = data
+        console.info(namaDepan)
+        console.info(namaTengah)
+        console.info(namaBelakang)
+    }
+
+    {
+        const data = {
+            namaDepan : "Muhamad",
+            namaBelakang : "Faz"
+        }
+        const {namaDepan : depan,tengah = "Wildan",namaBelakang : belakang} = data
+        console.info(depan)
+        console.info(tengah)
+        console.info(belakang)
+    }
+</script>
+    </body>
+</html>

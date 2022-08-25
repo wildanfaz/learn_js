@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Debugger</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ function namaLengkap(depan,tengah,belakang){
+     //debugger;
+     const nama = `${depan} ${tengah} ${tengah}`;
+     return nama
+ }
+ const saya = namaLengkap('Muhamad','Wildan','Faz')
+ console.info(saya)
+
+ function sum(...nomer){
+     debugger;
+     let total = 0;
+     for (const angka of nomer){
+         total += angka;
+     }
+     return total
+ }
+ console.info(sum(1,2,3))
+</script>
+    </body>
+</html>

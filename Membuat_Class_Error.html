@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Membuat Class Error</title>
+</head>
+<body>
+<script>
+    class IniError extends Error{
+        constructor(message, pesan) {
+            super(message)
+            this.pesan = pesan
+        }
+    }
+
+    class Tambah{
+        static plus(...nomer) {
+            if (nomer.length === 0) {
+                // const ngebug = new Error("ngebug parameter ora olih kosong bang")
+                // throw ngebug
+                throw new IniError("ngebug, parameter ora olih kosong bang", "Nomere Durung Diisi")
+            }
+            let no = 0
+            for (const angka of nomer) {
+                no += angka
+            }
+            return no
+        }
+    }
+
+    try {
+        console.info(Tambah.plus())
+    } catch (ngebug) {
+        if (ngebug instanceof IniError) {
+            console.error(`${ngebug.message}, Penyebab Error : ${ngebug.pesan}`)
+        } else {
+            console.error(`${ngebug.message}`)
+        }
+    } finally {
+        console.info("Alhamdulillah Mantap")
+    }
+</script>
+</body>
+</html>

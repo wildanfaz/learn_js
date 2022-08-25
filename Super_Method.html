@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Super Method</title>
+</head>
+<body>
+<script>
+    class Siji{
+        superFaz() {
+            console.info("Halooo")
+        }
+    }
+
+    class Loro extends Siji{
+        superFaz() {
+            super.superFaz()
+            console.info("Haiii")
+        }
+    }
+
+    const hai = new Loro()
+    hai.superFaz()
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Inheritance</title>
+</head>
+<body>
+<script>
+    class Data{
+        haloBang(nama) {
+            console.info(`Data Nama Depan ${this.nama} Nama Belakang ${nama}`)
+        }
+    }
+
+    class Person extends Data{
+        haloBang(nama) {
+            console.info(`Person Nama Depan ${this.nama} Nama Belakang ${nama}`)
+        }
+    }
+
+    const wildan = new Data()
+    wildan.nama = "Wildan"
+    wildan.haloBang("Faz")
+
+    const faz = new Person()
+    faz.nama = "Wildan"
+    faz.haloBang("Faz")
+
+    console.info(wildan)
+    console.info(faz)
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Function Generator</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ function* namaSaya(){
+     yield "Muhamad";
+     yield "Wildan";
+     yield "Faz";
+ }
+const nama = namaSaya();
+for (const namaku of nama){
+    console.info(namaku)
+}
+//lazy
+function* bilGanjil(value){
+    for (let i = 1; i <= value; i++){
+        if (i % 2 === 1){
+            console.info(`Yield ${i}`);
+            yield i;
+        }
+    }
+}
+
+//eager
+function bilGanjilArray(value){
+    const result = []
+    for (let i = 1; i <= value; i++){
+        if (i % 2 === 1){
+            console.info(`Yield ${i}`);
+            result.push(i);
+        }
+    }
+    return result;
+}
+
+const nomer = bilGanjilArray(10)
+for (const urutan of nomer){
+console.info(urutan)
+}
+
+const nomerGenerator = bilGanjil(10)
+console.info(nomerGenerator.next().value)
+console.info(nomerGenerator.next().value)
+console.info(nomerGenerator.next().value)
+//Generator Menggunakan * Setelah Function
+//Menggunakan Yield Untuk Mengembalikan Data
+</script>
+    </body>
+</html>

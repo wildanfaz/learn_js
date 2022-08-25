@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Optional Chaining</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ const a = {};
+ let d;
+ if (a.b !== undefined && a.b !== null) {
+     d = a.b.c;
+ }
+ alert(d);
+ document.writeln("Wildan")
+ const nama = {depan : {
+     aku : "Wildan"
+ }};
+ let aku = nama?.depan?.aku;
+ alert(aku);
+</script>
+    </body>
+</html>

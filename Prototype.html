@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype</title>
+</head>
+<body>
+<script>
+    function Dataku(nama, umur){
+        this.nama = nama
+        this.umur = umur
+        this.halo = function (nama){
+            console.info(`Halo ${nama}, nama saya ${this.nama}`)
+        }
+    }
+
+    Dataku.prototype.satu = function (){
+        console.log(`Insya Allah ${this.nama} Sukses`)
+    }
+    Dataku.prototype.dua = function (){
+        console.log(`Aamiin`)
+    }
+    const kula = new Dataku("Muhamad Wildan Faz", 18)
+    kula.dua = function (){
+        console.log("Aamiin Ya Allah")
+    }
+    console.log(kula)
+    kula.satu()
+    kula.dua()
+</script>
+</body>
+</html>

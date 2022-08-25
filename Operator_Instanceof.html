@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Instanceof</title>
+</head>
+<body>
+<script>
+    class A{}
+    class B extends A{}
+
+    const ini = new A()
+    const itu = new B()
+
+    console.info(typeof ini)
+    console.info(typeof itu)
+
+    console.info(ini instanceof A)
+    console.info(ini instanceof B)
+
+    console.info(itu instanceof A)
+    console.info(itu instanceof B)
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+</head>
+<body>
+<script>
+    class Tambah{
+        static plus(...nomer) {
+            if (nomer.length === 0) {
+                // const ngebug = new Error("ngebug parameter ora olih kosong bang")
+                // throw ngebug
+                throw new Error("ngebug, parameter ora olih kosong bang")
+            }
+            let no = 0
+            for (const angka of nomer) {
+                no += angka
+            }
+            return no
+        }
+    }
+
+    const hasil = Tambah.plus(1,2,3,4)
+    console.info(hasil)
+    console.info(Tambah.plus())
+    console.info("Tes")
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor Inheritance</title>
+</head>
+<body>
+<script>
+    function Nama(namaDepan) {
+        this.namaDepan = namaDepan
+        this.halo = function (namaKamu) {
+            console.info(`Halo ${namaKamu}, nama saya ${namaDepan} ${namaBelakang}`)
+        }
+    }
+
+    function Invite(namaDepan, namaBelakang) {
+        this.namaBelakang = namaBelakang
+        Nama.call(this, namaDepan)
+    }
+
+    const mantap = new Invite("Muhamad Wildan", "Faz")
+    console.info(mantap)
+    //new mengembalikan object tanpa return
+    document.writeln(mantap)
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Anonymous Function</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ const say = function(nama){
+     document.writeln(`<p>Halo ${nama}</p>`);
+ }
+ say("Wildan");
+
+ function aku(namaku){
+     namaku("Wildan");
+ }
+ aku(function(namaSaya){
+     document.writeln(`<p>Halo ${namaSaya}</p>`);
+ })
+</script>
+    </body>
+</html>

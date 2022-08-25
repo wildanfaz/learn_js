@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Rest Parameter</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ function nambah(nama, ...data){
+     let total = 0;
+     for (const item of data) {
+         total += item;
+     }
+     document.writeln(`<p>Jumlah ${nama} Ana Rp.${total}</p>`)
+ }
+ nambah("Duite",1000,2000,5000,10000)
+ const araneSpreadSyntax = [2000,2000]
+ nambah("Duite", ...araneSpreadSyntax)
+
+ function oldSum(){
+     let total = 0;
+     for (const argument of arguments) {
+         total += argument;
+     }
+     document.writeln(`<p>Total Duite Ana Rp.${total}</p>`)
+ }
+ oldSum(18000,4000)
+ // intine dong pan nyimpen array dokoni titik telu mburine nama parameter 
+</script>
+    </body>
+</html>

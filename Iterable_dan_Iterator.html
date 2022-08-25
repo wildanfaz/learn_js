@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iterable dan Iterator</title>
+</head>
+<body>
+<script>
+    class TesIteratorResult{
+        constructor(value, done) {
+            this.value = value
+            this.done = done
+        }
+    }
+
+    class TesIterator{
+        constructor(value, max) {
+            this.value = value
+            this.max = max
+        }
+
+        next() {
+            try {
+                if (this.value > this.max) {
+                    return new TesIteratorResult(this.value, true)
+                } else {
+                    return new TesIteratorResult(this.value, false)
+                }
+            } finally {
+                this.value++
+            }
+        }
+    }
+
+    class TesCounter{
+        constructor(value, max) {
+            this.value = value
+            this.max = max
+        }
+
+        [Symbol.iterator]() {
+            return new TesIterator(this.value, this.max)
+        }
+    }
+
+    const tes = new TesCounter(1, 10)
+    for (const nomer of tes) {
+        console.info(nomer)
+    }
+</script>
+</body>
+</html>

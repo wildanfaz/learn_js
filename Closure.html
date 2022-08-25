@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Closure</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ function adder(value){
+     const saya = "Wildan";
+     function add(nyongPanMetu){
+         console.info(saya);
+         return value + nyongPanMetu;
+     }
+     return add
+ }
+ const lagiNengNjaba = adder(10)
+ console.info(lagiNengNjaba(10))
+</script>
+    </body>
+</html>

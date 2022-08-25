@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getter dan Setter di Class</title>
+</head>
+<body>
+<script>
+    class Nama{
+        constructor(depan, tengah, belakang) {
+            this.depan = depan
+            this.tengah = tengah
+            this.belakang = belakang
+        }
+        get namaku() {
+            return `Nama Saya ${this.depan} ${this.tengah} ${this.belakang}`
+        }
+        set namaku(oke) {
+            const hasil = oke.split(" ")
+            this.depan = hasil[0]
+            this.tengah = hasil[1]
+            this.belakang = hasil[2]
+        }
+    }
+
+    const tes = new Nama("Muhamad", "Wildan", "Faz")
+    console.info(tes)
+    console.info(tes.namaku)
+    tes.namaku = "Muhamad Wildan Faz"
+    console.info(tes)
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Scope</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+    //Global Scope
+ let angka = 0
+ console.info(angka)
+ function scope(){
+     //Local Scope
+    angka++;
+    console.info(angka);
+    let nama = "";
+    function namaSaya(){
+        //Nestes Scope
+        nama = "Muhamad Wildan Faz"
+        console.info(nama);
+    }
+    namaSaya()
+ }
+scope();
+</script>
+    </body>
+</html>

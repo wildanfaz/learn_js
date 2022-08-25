@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Masalah Variabel Var</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+    //Global scope
+ let i = 20
+ for (let i = 0; i <10;i++){
+     //Local scope
+     console.info(`${i}`)
+ }
+ //Variabel let pada local scope tidak mengubah variabel pada global scope
+ console.info(`${i}`)
+
+ var a = 20
+ for (var a = 0; a <10;a++){
+     //Local scope
+     console.info(`${a}`)
+ }
+ //Variabel var pada local scope mengubah variabel pada global scope
+ console.info(`${a}`)
+</script>
+    </body>
+</html>

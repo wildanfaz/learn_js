@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Getter dan Setter</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ const saya = {
+     namaDepan : "Muhamad",
+     namaTengah : "Wildan",
+     namaBelakang : "Faz",
+     get fullname(){
+         return `Nama Lengkap : ${this.namaDepan} ${this.namaTengah} ${this.namaBelakang}`
+     },
+     set fullname(value){
+         const array = value.split(" ");
+         this.namaDepan = array[0];
+         this.namaTengah = array[1];
+         this.namaBelakang = array[2];
+     }
+ }
+ //document.writeln(saya.namaDepan+" "+saya.namaTengah+" "+saya.namaBelakang);
+ document.writeln(saya.fullname);
+ //Get go ngubah atribut biasa kaya function
+ console.info(saya.fullname);
+ saya.fullname = "Muhamad Wildan Faz"
+ console.table(saya)
+</script>
+    </body>
+</html>

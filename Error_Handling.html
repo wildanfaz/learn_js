@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Handling</title>
+</head>
+<body>
+<script>
+    class Tambah{
+        constructor() {
+            this.angka = 0
+        }
+
+        tambah() {
+            try {
+                return this.angka
+            } finally {
+                this.angka++
+            }
+        }
+
+        static plus(...nomer) {
+            if (nomer.length === 0) {
+                // const ngebug = new Error("ngebug parameter ora olih kosong bang")
+                // throw ngebug
+                throw new Error("ngebug, parameter ora olih kosong bang")
+            }
+            let no = 0
+            for (const angka of nomer) {
+                no += angka
+            }
+            return no
+        }
+    }
+
+    class Oke{
+        #tambah = 0
+        mantap(){
+            try {
+                return this.#tambah
+            } finally {
+                this.#tambah++
+            }
+        }
+    }
+
+    try {
+        console.info(Tambah.plus())
+        console.info("Tes")
+    } catch (cek) {
+        console.info(`Pesan : ${cek.message}`)
+    } finally {
+        console.info("Alhamdulillah Mantap")
+    }
+
+    console.info("Tes Lagi Bang")
+
+    const tes = new Tambah()
+    console.info(tes.tambah())
+    console.info(tes.tambah())
+    console.info(tes.tambah())
+
+    const plus = new Oke()
+    console.info(plus.mantap())
+    console.info(plus.mantap())
+    console.info(plus.mantap())
+</script>
+</body>
+</html>

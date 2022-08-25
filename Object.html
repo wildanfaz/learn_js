@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+    function Dataku(nama, umur){
+        this.nama = nama
+        this.umur = umur
+        this.halo = function (nama) {
+            console.info(`Halo ${nama}, nama saya ${this.nama}`)
+        }
+    }
+
+    const kula = new Dataku("Muhamad Wildan Faz", 18)
+    // kula.nama = "Muhamad Wildan Faz"
+    // kula.umur = 18
+    kula.halo("Bang")
+    document.writeln(kula.nama + " " + kula.umur)
+    console.log(kula)
+</script>
+</body>
+</html>

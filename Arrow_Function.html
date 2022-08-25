@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Arrow Function</tittle>
+        <br>
+    </head>
+    <body>
+<script>
+ const namaSaya = (nama) => {
+     const haloNama = `Halo ${nama}`;
+     console.info(haloNama);
+ }
+ namaSaya("Wildan")
+
+ const aku = (nama) => console.info(`Halo ${nama}`);
+ aku("Wildan")
+
+ const sum = (a,b) => {
+     return a + b;
+ }
+ console.info(sum(1,2))
+ 
+ const sum2 = (a,b) => a + b;
+ console.info(sum2(1,2))
+
+ const halo = namaku => console.info(`Halo ${namaku}`);
+ halo("Wildan")
+ 
+ function namane(nama){
+     nama("Wildan")
+ }
+ //Anonymous
+ namane(function(namaku){
+    console.info(`Halo ${namaku}`)
+ })
+ //Arrow
+ namane(nama => console.info(`Halo ${nama}`))
+</script>
+    </body>
+</html>

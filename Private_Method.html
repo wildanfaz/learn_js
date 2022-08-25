@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Private Method</title>
+</head>
+<body>
+<script>
+    class MetodeRahasia{
+        oke(nama) {
+            if (nama) {
+                this.#anaNamane(nama)
+            } else {
+                this.#lakaNamane()
+            }
+        }
+        #anaNamane(nama) {
+            console.info(`Halo ${nama}`)
+        }
+        #lakaNamane() {
+            console.info("Halo")
+        }
+    }
+
+    const haloNama = new MetodeRahasia()
+    haloNama.oke("Wildan")
+</script>
+</body>
+</html>
